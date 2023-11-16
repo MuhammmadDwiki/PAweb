@@ -1,0 +1,478 @@
+/* Resetting default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the body */
+body {
+    width: 100%;
+    min-height: 100vh;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+
+/* Styling for the hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-bottom: 0ch;
+    overflow: hidden; /* Ensure the GIF doesn't overflow */
+}
+
+/* Styling for the background GIF */
+.back-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+   
+}
+
+/* Styling for the content within the hero section */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Styling for the heading in the content */
+.content h1 {
+    font-size: 160px;
+    color: white;
+    font-weight: 600;
+}
+
+/* Styling for the anchor tag within the content */
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Styling for the navigation bar */
+nav {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 10px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(12, 3, 51, 0.5);
+    z-index: 1000; /* agar tetap berada di depan */
+}
+
+/* Styling for the navigation list */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 10px;
+}
+
+/* Styling for navigation list items */
+nav li {
+    margin: 0 10px;
+}
+
+/* Styling for navigation links */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Styling for the slider animation in the navigation bar */
+.navbar-slider {
+    position: absolute;
+    height: 2px; 
+    background-color: #ff6347;
+    transition: transform 0.3s ease; 
+    transform: scaleX(0); 
+    transform-origin: left;
+    bottom: 0;
+}
+
+/* Styling for the logo in the navigation bar */
+nav .logo {
+    width: 80px;
+}
+
+/* Styling for navigation list items */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 70px;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.3s ease; 
+}
+
+/* Styling for the underline effect on navigation links */
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease; 
+}
+
+/* Styling for the underline effect on navigation links during hover */
+nav ul li a:hover::before {
+    transform: scaleX(1); 
+}
+
+/* Styling for the heading in the content during hover */
+.content h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    transition: 0.8s;
+}
+
+/* Styling for the welcome and fishing text during hover */
+.welcome-text:hover, .fishing-text:hover {
+    transform: scale(1.1); 
+    transition: transform 0.8s ease; 
+}
+
+/* Styling for the fishing text */
+.fishing-text {
+    text-decoration: none;
+    color: aqua;
+    position: relative;
+    display: inline-block;
+    transition: padding-left 0.3s ease, color 0.3s ease; 
+    text-align: center; 
+}
+
+/* Styling for the background effect on fishing text */
+.fishing-text::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparent; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease; 
+    z-index: -1; 
+    text-align: center; 
+}
+
+/* Styling for the background effect on fishing text during hover */
+.fishing-text:hover::before {
+    background-color: rgba(126, 247, 237, 0.8); 
+    border-radius: 50px;
+}
+
+/* Styling for the fishing text during hover */
+.fishing-text:hover {
+    color: #fff; 
+    padding-left: 70px; 
+    transition: 0.6s;
+}
+
+/* Media query for adjusting video width in landscape orientation */
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Media query for adjusting video height in portrait orientation */
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* Styling for the wrapper */
+a{
+    text-decoration: none;
+}
+.wrapper {
+    padding: 125px 0 150px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the services container */
+.services {
+    width: 100%; 
+    max-width: 1100px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+/* Styling for a single product */
+.single-img {
+    border-radius: 5px;
+    width: 325px;
+    height: 450px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    transition: .3s;
+    margin: 0 10px 20px; 
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+.single-img:hover{
+    transform: translate(0, -9px);
+}
+.img-one{
+    background-image: url('../assets/PLUSINNO Fishing Rod and Reel Combos.plusinno fishing rod and reel combos.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.img-two{
+    background-image: url('../assets/RYOBI\ ZEUS\ HP\ 6000\ POWER\ HENDEL.rell\ ryobi\ zeus\ hp\ 6000\ power\ hendel.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.img-three{
+    background-image: url('../assets/PE\ Shimano\ SEPHIA\ 0.4\ 150M.senar\ pe\ shimano\ sephia\ 0.4\ 150m.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.img-four{
+    background-image: url('../assets/PREMIUM\ QUALITY\ HAMMER\ HEAD\ CHINU\ MERAH.kail\ premium\ quality\ hammer\ head\ chinu\ merah.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.img-five{
+    background-image: url('../assets/Aksesoris\ Pancing\ Kili\ Kili\ Catfish\ Three\ Way\ Swivel.aksesoris\ pancing\ kili\ kili\ catfish\ three\ way\ swivel.jpg') ;
+    background-size: cover;
+    background-position: center center;
+}
+.img-six{
+    background-image: url('../assets/Umpan\ Pancing\ ESSEN\ STELLA\ MURNI\ AROMA\ SOTO\ AYAM\ 30ML\ Super\ GACOR.umpan\ pancing\ essen\ stella\ murni\ aroma\ soto\ ayam\ 30ml\ super\ gacor.jpg');
+    background-size: cover;
+    background-position: center center; 
+
+}
+.img-text{
+    background: linear-gradient(to top,rgba(5, 106, 221, 0.9),rgba(255,255,255,0));
+    padding: 0 10px 5px 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translate(0, 110px);
+    line-height: 25px;
+    transition: 0.5s ease;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.img-text h4{
+    line-height: 28px;
+    margin: 16px 20px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 25px;
+}
+.services button{
+    background: #252525;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 50px;
+    line-height: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.single-img:hover .img-text{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+@media (max-width: 991px){
+    .wrapper{
+        padding: 0;
+    }
+    .services{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        margin-bottom: 35px;
+    }
+}
+
+/* Styling for the footer */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styling for the social icons and menu in the footer */
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+/* Styling for the social icon and menu items */
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+/* Styling for the social icon links */
+.social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* Styling for the social icon links during hover */
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+/* Styling for the menu links */
+.menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+/* Styling for the menu links during hover */
+.menu__link:hover {
+    opacity: 1;
+}
+
+/* Styling for the copyright information in the footer */
+.footer p {
+    color: #fff;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Styling for the wave animation */
+.wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+}
+
+/* Styling for the first wave animation */
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+/* Styling for the second wave animation */
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+}
+
+/* Styling for the third wave animation */
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+/* Styling for the fourth wave animation */
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+/* Keyframes for the wave animation */
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+/* Keyframes for the wave animation */
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}

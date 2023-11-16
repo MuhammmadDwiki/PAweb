@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: url('gifbg.gif') center/cover no-repeat;
+    backdrop-filter: blur(7px);
+  }
+  
+
+header {
+    height: 300px;
+    position: relative;
+}
+
+header::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./office.jpg);
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+header::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+    background-size: cover;
+    background-color: black;
+    background-position: bottom;
+}
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Adjust the z-index to make sure it's above other elements */
+}
+
+
+#our-Team {
+    width: 80%;
+    margin: 4rem auto 1rem;
+}
+
+#our-Team h2 {
+    text-align: center;
+    margin: 1rem auto 4rem;
+    position: relative;
+}
+
+#our-Team h2::after {
+    content: '';
+    height: 4px;
+    margin: 0 auto;
+    text-align: center;
+    width: 15%;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    transform: translate(-50%);
+}
+
+.teamContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.team-item h5 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-item span {
+    margin-top: .4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(7, 176, 176);
+}
+
+.team-item img {
+    width: 80px;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+    
+
+@media screen and (max-width: 633px) {
+    
+
+    .num-container {
+        flex-direction: column;
+    }
+
+    .num-item {
+        margin: 1rem;
+    }
+
+    .teamContainer {
+        justify-content: center;
+    }
+}
+
+.desc-text{
+    max-height: 200px;
+    overflow: hidden;
+    color: #fff;
+}

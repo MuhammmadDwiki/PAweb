@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;700&display=swap');
+
+/* Reset and basic styling */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8; /* Light gray background for the body */
+    color: #333; /* Dark text color */
+}
+
+/* Main content styling */
+.dash-main {
+    background-color: #fff; /* White background for the main content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+}
+
+h1, p {
+    color: #333; /* Dark text color */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add some space between the content and the table */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #2196F3; /* Green background for table headers */
+    color: white; /* White text color for table headers */
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Action buttons */
+.action {
+    text-align: center;
+    margin-top: 10px; /* Add space between the table and buttons */
+}
+
+.add-btn, .edit-btn, .delete-btn {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.add-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Hover effects for buttons */
+.add-btn:hover, .edit-btn:hover, .delete-btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Slightly larger font size for smaller screens */
+    }
+}
