@@ -14,7 +14,7 @@ if(isset($_POST["login"])) {
                 $_SESSION['logged'] = true;
                 $_SESSION['id'] = $row['id_akun'];
                 $_SESSION['username'] = $row['username'];
-                header("Location:index.php");
+                header("Location: indexlogin.php");
                 exit;
             } else {
                 echo "Gagal login failed";   

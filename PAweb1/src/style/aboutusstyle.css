@@ -28,6 +28,21 @@ header::before {
     opacity: 0.8;
     z-index: -1;
 }
+.back-to-menu {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-menu:hover {
+    background-color: #2980b9;
+}
 
 header::after {
     content: ' ';

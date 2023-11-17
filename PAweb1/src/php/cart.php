@@ -44,10 +44,10 @@ if(isset($_SESSION['logged'])){
         ");
     }
 }
-// else{
-//     header('Location: index.php');
-//     exit;
-// }
+else{
+    header('Location: productpage.php');
+    exit;
+}
 
 $produk = [];
 
@@ -63,16 +63,20 @@ while ($row = mysqli_fetch_assoc($result)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-	<link href="../style/stylecart.css" rel="stylesheet">
+    <link href="../style/stylecart.css" rel="stylesheet">
 </head>
 <body>
-<form action="https://wa.me/6282291550686" method="post">
-    <div class="wrapper">
-		<form action="" method="post">
-		<h1>Cart</h1>
-		<div class="project">
-			<div class="shop">
-				<?php $totalharga = 0;
+    <form action="https://wa.me/6282291550686" method="post">
+        <div class="wrapper">
+    <h1>Cart</h1>
+    <!-- Back to Products Link -->
+    <a href="productpage.php" class="back-to-products">Back to Products</a>
+
+    <form action="https://wa.me/6282291550686" method="post">
+        <div class="project">
+            <div class="shop">
+                <?php 
+                $totalharga = 0;
                 foreach($produk as $prd){ ?>
                     <div class="box">
                         <img src="../assets/<?php echo $prd["gambar"]; ?>">
@@ -90,23 +94,22 @@ while ($row = mysqli_fetch_assoc($result)) {
                 $totalharga += $prd["harga"] * $prd["quantity"];
                 }
                 ?>
-			</div>
-			<div class="right-bar">
-				<p><span>Subtotal</span> <span><?php echo $totalharga ?></span></p>
-				<hr>
-				<p><span>Tax (5%)</span> <span>$6</span></p>
-				<hr>
-				<p><span>Shipping</span> <span>$15</span></p>
-				<hr>
+            </div>
+            <div class="right-bar">
+                <p><span>Subtotal</span> <span><?php echo $totalharga ?></span></p>
+                <hr>
+                <p><span>Tax (5%)</span> <span>$6</span></p>
+                <hr>
+                <p><span>Shipping</span> <span>$15</span></p>
+                <hr>
                 <p><span>Total</span> <span><?php echo $totalharga ?></span></p>
-                    <input type="hidden" name="" value="CheckOut">
-                    <input type="submit" name="pesan" value="CheckOut">
-                    <a href="https://wa.me/qr/FBHW3OIZWF5TF1"><i class="fa fa-shopping-cart"></i></a>
-                </div>
-            </form>
-		</div>
-	</div>
-</form>
+                <input type="hidden" name="" value="CheckOut">
+                <input type="submit" name="pesan" value="CheckOut">
+                <a href="https://wa.me/qr/FBHW3OIZWF5TF1"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>

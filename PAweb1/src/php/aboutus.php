@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="../style/aboutusstyle.css">
 </head>
 <body>
+    <?php
+        session_start();
+
+        $url = "../php/index.php";
+        $url_login = "../php/indexlogin.php";
+
+
+        if(isset($_SESSION["logged"])) {
+            $login = $_SESSION["logged"];
+        }
+    ?>
+
+<a href="<?= isset($login) ? $url_login : $url ?>" class="back-to-menu">Back to Menu</a>
+
     <section id="our-Team">
         <h2>Our Member</h2>
         <div class="teamContainer">
@@ -33,7 +47,7 @@
 
 
     <footer>
-        <p> &copy; 2022 - All rights reserved -</p>
+        <p> &copy; 2023 - All rights reserved -</p>
     </footer>
 
 </body>

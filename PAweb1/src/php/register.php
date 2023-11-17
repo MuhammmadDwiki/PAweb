@@ -63,39 +63,37 @@ if(isset($_POST['registrasi'])) {
 </style>
 
 <body>
-    <div class="container">
-        <div class="box form-box">
-            <header>Sign Up</header>
-            <form action="" method="POST">
-                <div class="field input">
-                    <label for="username">username</label>
-                    <input type="text" name="username" id="username" autocomplete="off" required>
-                </div>
+    <div class="login-box">
+        <h2>Sign Up</h2>
+        <form action="" method="POST">
+            <div class="user-box">
+                <input type="text" name="username" id="username" autocomplete="off" required>
+                <label for="username">Username</label>
+            </div>
 
-                <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" autocomplete="off" required>
-                </div>
+            <div class="user-box">
+                <input type="email" name="email" id="email" autocomplete="off" required>
+                <label for="email">Email</label>
+            </div>
 
-                <div class="field input">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" autocomplete="off" required>
-                </div>
+            <div class="user-box">
+             <input type="password" name="password" id="password" autocomplete="off" required>
+             <label for="password">Password</label>
+            </div>
 
-                <div class="field input">
-                    <label for="password">CPassword</label>
-                    <input type="password" name="cpassword" id="password" autocomplete="off" required>
-                </div>
-                
-                <div class="field">
-                    <input type="submit" name="registrasi" value="Masuk" class="btn" required>
-                </div>
+            <div class="user-box">
+                <input type="password" name="cpassword" id="password" autocomplete="off" required>
+                <label for="password">Confirm Password</label>
+            </div>
+            
+            <div class="field">
+                <input type="submit" name="registrasi" value="Masuk" class="btn" required>
+            </div>
 
-                <div class="links">
-                    Already a member? <a href="../php/Formlogin.php">Login Now</a>
-                </div>
-            </form>
-        </div>
+            <div class="links">
+                Already a member? <a href="../php/Formlogin.php">Login Now</a>
+            </div>
+        </form>
     </div>
 </body>
 </html>

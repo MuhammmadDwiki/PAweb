@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
             <h1 class="welcome-text">Welcome</h1>
 
             <!-- Tautan untuk pergi mancing (tautan sementara) -->
-            <a href="#" class="fishing-text">Info Mancing!</a>
+            <a href="https://www.mardalani.com/2022/07/kolam-pemancingan-di-samarinda-paling-laris.html" class="fishing-text">Info Mancing!</a>
         </div>
 
         <!-- Menu navigasi -->
@@ -45,16 +46,17 @@
                 <li><a href="../php/productpage.php" id="categories-link">Produk</a></li>
 
                 <!-- Tautan sementara untuk "Article" -->
-                <li><a href="#" id="idk2-link">Article</a></li>
+                <li><a href="https://www.outdoorlife.com/category/fishing/" id="idk2-link">Article</a></li>
 
                 <!-- Tautan sementara untuk "Spot Mancing" -->
-                <li><a href="#" id="idk3-link">Spot Mancing</a></li>
+                <li><a href="https://www.mardalani.com/2022/07/kolam-pemancingan-di-samarinda-paling-laris.html" id="idk3-link">Spot Mancing</a></li>
 
                 <!-- Tautan ke halaman About Us -->
                 <li><a href="../php/aboutus.php" id="about-us-link">About Us</a></li>
 
                 <!-- Tautan ke halaman login -->
                 <li><a href="../php/Formlogin.php" id="login-link">Login</a></li>
+                <li><a href="../php/logout.php" id="login-link">logout</a></li>
             </ul>
         </nav>
     </div>

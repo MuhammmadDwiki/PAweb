@@ -1,14 +1,109 @@
 body, html {
-	height: 100%;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	background: #262626 !important;
+    width: 100%;
+    min-height: 100vh;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+/* Styling for the navigation bar */
+nav {
+    position: fixed; 
+	    top: 0; 
+    left: 0;
+    width: 100%;
+    padding: 10px 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(12, 3, 51, 0.5);
+    z-index: 1000; /* agar tetap berada di depan */
+}
+
+/* Styling for the navigation list */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0 10px;
+}
+
+/* Styling for navigation list items */
+nav li {
+    margin: 0 10px;
+}
+
+/* Styling for navigation links */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    position: relative;
+}
+
+/* Styling for the slider animation in the navigation bar */
+.navbar-slider {
+    position: absolute;
+    height: 2px; 
+    background-color: #ff6347;
+    transition: transform 0.3s ease; 
+    transform: scaleX(0); 
+    transform-origin: left;
+    bottom: 0;
+}
+
+/* Styling for the logo in the navigation bar */
+nav .logo {
+    width: 80px;
+}
+
+/* Styling for navigation list items */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 70px;
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    position: relative;
+    transition: all 0.3s ease; 
+}
+
+/* Styling for the underline effect on navigation links */
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); 
+    transform-origin: left;
+    transition: transform 0.3s ease; 
+}
+
+/* Styling for the underline effect on navigation links during hover */
+nav ul li a:hover::before {
+    transform: scaleX(1); 
 }
 .single-search {
 	margin-bottom: auto;
 	margin-top: auto;
-	height: 40px;
+	height: 100%;
 	background-color: #fafafa;
 	border-radius: 30px;
 	padding: 10px;
@@ -18,7 +113,7 @@ body, html {
 	justify-content: center;
 }
 .c-height {
-	height: 100%;
+	height: 20%;
 }
 .custom-input {
 	border: 0;
@@ -68,6 +163,7 @@ input::placeholder {
 }
 .single-card {
 	position: relative;
+	object-fit: cover;
 	width: 280px;
 	height: 400px;
 	margin: 15px;
@@ -81,16 +177,17 @@ input::placeholder {
 .single-card:hover {
 	transform: translateY(-10px);
 }
-.img-area {
+.img-area  {
 	position: relative;
 	width: 100%;
 	height: 200px;
 	overflow: hidden;
+	background-size: cover;
 }
 .img-area img {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	transition: transform 0.3s ease;
 }
 .img-area:hover img {

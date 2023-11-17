@@ -6,10 +6,13 @@ if (!isset($_SESSION['logged'])) {
     header('Location:Formlogin.php');
 }
 
-$result = mysqli_query($conn, "SELECT * FROM produk");
-$produk = [];
-while ($row = mysqli_fetch_array($result)){
-  $produk[] = $row;
+if(isset($_GET['id'])){
+  $id = $_GET['id'];
+  $result = mysqli_query($conn, "SELECT * FROM produk where id_produk = '$id'");
+  $produk = [];
+  while ($row = mysqli_fetch_array($result)){
+    $produk[] = $row;
+  }
 }
 ?>
 
@@ -25,48 +28,27 @@ while ($row = mysqli_fetch_array($result)){
     <main class="container">
  
         <!-- Left Column / Headphones Image -->
+        <?php foreach($produk as $prd) { ?>
         <div class="left-column">
-          <img data-image="black" src="" alt="">
-          <img data-image="blue" src="" alt="">
-          <img data-image="red" class="active" src="" alt="">
+          <img data-image="black" src="../assets/<?php echo $prd['gambar'] ?>" alt="">
         </div>
        
        
         <!-- Right Column -->
         <div class="right-column">
-       
           <!-- Product Description -->
-          <div class="product-description">
-            <span>Nama Produk</span>
-            <h1>Produk/Merek</h1>
-            <p>deskripsi prodduknya taroh sini</p>
-          </div>
-       
-          <!-- Product Configuration -->
-          <div class="product-configuration">
-       
-            
-       
-            <!-- Cable Configuration -->
-            <div class="cable-config">
-              <span>Configurasi Produk</span>
-       
-              <div class="cable-choose">
-                <button>Pilihan 1</button>
-                <button>Pilihan 2</button>
-                <button>Pilihan 3</button>
-              </div>
-              
-              <a href="#">balbalbalbalblablablabla</a>
+            <div class="product-description">
+              <span><?php echo $prd['type_barang'] ?></span>
+              <h1><?php echo $prd['nama_barang'] ?></h1>
+              <p><?php echo $prd['desk'] ?></p>
+            </div>
+            <!-- Product Pricing -->
+            <div class="product-price">
+              <span><?php echo $prd['harga'] ?></span>
+              <a href="cart.php?id=<?php echo $prd['id_produk'] ?>" class="cart-btn">Add to cart</a>
             </div>
           </div>
-
-          <!-- Product Pricing -->
-          <div class="product-price">
-            <span>Rp.135.000</span>
-            <a href="#" class="cart-btn">Add to cart</a>
-          </div>
-        </div>
+        <?php } ?>
       </main>
 </body>
 </html>
