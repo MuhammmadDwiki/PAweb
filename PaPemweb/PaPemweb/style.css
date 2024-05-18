@@ -1,0 +1,15 @@
+#element1{
+    background-color: orange;
+}
+#element2{
+    background-color: red;
+}
+.custom-div{
+    padding: 10px;
+}
+.tes{
+    float: right;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
